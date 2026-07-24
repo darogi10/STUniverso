@@ -115,7 +115,7 @@
             60% { transform: translateY(-5px); }
         }
 
-       */ .watermark {
+        .watermark {
             position: fixed;
             top: 0;
             left: 0;
@@ -127,7 +127,7 @@
             z-index: 1;            /* Queda al fondo, detrás de los textos */
             pointer-events: none;  /* Permite hacer clic y deslizar a través de ella */
             filter: brightness(0.9); /* Ajusta sutilmente el brillo si es necesario */
-        }/*
+        }
     </style>
     <!-- Cargar la API de YouTube -->
     <script src="https://www.youtube.com/iframe_api"></script>
@@ -136,7 +136,7 @@
 <body>
     
     <!-- Foto marca de agua -->
-    <!-- <img src="Foto.jpeg" class="watermark" alt="Marca de agua"> -->
+    <img src="Foto.jpeg" class="watermark" alt="Marca de agua">
 
     <!-- Contenedor invisible para YouTube -->
     <div id="youtube-player-container">
