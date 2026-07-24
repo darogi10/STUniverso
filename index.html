@@ -12,6 +12,7 @@
         }
 
         body {
+            
             background-color: #05050e;
             color: #ffffff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -113,12 +114,29 @@
             40% { transform: translateY(-10px); }
             60% { transform: translateY(-5px); }
         }
+
+        .watermark {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;          /* Ocupa el 100% del ancho de la pantalla */
+            height: 100vh;         /* Ocupa el 100% del alto de la pantalla */
+            object-fit: cover;     /* Mantiene la proporción de la foto sin deformarla */
+            object-position: center; /* Centra la foto en la pantalla */
+            opacity: 0.15;         /* Controla la transparencia (sube a 0.25 si la quieres más visible) */
+            z-index: 1;            /* Queda al fondo, detrás de los textos */
+            pointer-events: none;  /* Permite hacer clic y deslizar a través de ella */
+            filter: brightness(0.9); /* Ajusta sutilmente el brillo si es necesario */
+        }
     </style>
     <!-- Cargar la API de YouTube -->
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
+    
+    <!-- Foto marca de agua -->
+    <img src="Foto.jpeg" class="watermark" alt="Marca de agua">
 
     <!-- Contenedor invisible para YouTube -->
     <div id="youtube-player-container">
@@ -145,7 +163,7 @@
         const musicBtn = document.getElementById('musicBtn');
 
         // ID del video de YouTube (SÓLO el código de 11 caracteres)
-        const YOUTUBE_VIDEO_ID = 'dqLOUE8vGlk'; 
+        const YOUTUBE_VIDEO_ID = 'spbagny8OjM'; 
 
         // Esta función se ejecuta automáticamente cuando la API de YouTube carga
         function onYouTubeIframeAPIReady() {
@@ -296,7 +314,7 @@
             "Enigmática 🔮", "Mística 🌌", "Poética 📜", "Inalcanzable ⭐️", "Infinita 🌌",
             "Apacible 🍃", "Intensa ❤️‍🔥", "Serena 🧘‍♀️", "Espiritual 🕯️", "Divertida 🥳",
             "Ocurrente 💡", "Alegre 😄", "Carismática ✨", "Compañera 🤝", "Tesoro 💎",
-            "Bendición 🙏", "Mi Todo ❤️"
+            "Bendición 🙏", "Mi Todo ❤️", "Diosa "
         ];
 
         const textGroup = new THREE.Group();
